@@ -32,7 +32,7 @@ func getPlayerInput() (string, error) {
 		return "", err
 	}
 
-	userInput = strings.ReplaceAll(userInput, "\n", "")
+	userInput = strings.Replace(userInput, "\n", "", -1)
 
 	return userInput, nil
 }
