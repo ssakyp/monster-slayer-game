@@ -1,5 +1,6 @@
 package actions
 
+// GoSnakeCaseUsage
 const PLAYER_HEALTH = 100
 const MONSTER_HEALTH = 100
 

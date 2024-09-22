@@ -8,6 +8,7 @@ import (
 	"github.com/common-nighthawk/go-figure"
 )
 
+// roundData struct for round statistics
 type RoundData struct {
 	Action           string
 	PlayerAttackDmg  int
@@ -30,11 +31,13 @@ func ShowAvailableActions(specialAttackIsAvailable bool) {
 	fmt.Println("(1) Attack Monster")
 	fmt.Println("(2) Heal")
 
+	// only displays in a special round
 	if specialAttackIsAvailable {
 		fmt.Println("(3) Special Attack")
 	}
 }
 
+// function to print RoundData struct
 func PrintRoundStatistics(roundData *RoundData) {
 	if roundData.Action == "ATTACK" {
 		fmt.Printf("Player attacked monster for %v damage.\n", roundData.PlayerAttackDmg)
@@ -58,11 +61,14 @@ func DeclareWinner(winner string) {
 }
 
 func WriteLogFile(rounds *[]RoundData) {
+	// exePath contain the current directory that exe resides also with the name.exe part
 	exPath, err := os.Executable()
 	if err != nil {
 		fmt.Println("Writing log file failed. Exiting!")
 		return
 	}
+
+	// this will get rid of the name.exe path and take the rest of other parts (absolute location)
 	exPath = filepath.Dir(exPath)
 
 	file, err := os.Create(exPath + "/gamelog.txt")

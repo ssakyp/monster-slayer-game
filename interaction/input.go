@@ -10,6 +10,7 @@ import (
 var reader = bufio.NewReader(os.Stdin)
 
 func GetPlayerChoice(specialAttackIsAvailable bool) string {
+	// infinte loop
 	for {
 		playerChoice, _ := getPlayerInput()
 
@@ -27,6 +28,7 @@ func GetPlayerChoice(specialAttackIsAvailable bool) string {
 func getPlayerInput() (string, error) {
 	fmt.Print("Your choice: ")
 
+	// read the user input
 	userInput, err := reader.ReadString('\n')
 	if err != nil {
 		return "", err
