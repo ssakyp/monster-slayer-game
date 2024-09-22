@@ -59,7 +59,7 @@ func WriteLogFile(rounds *[]RoundData) {
 		fmt.Println("Saving a log file failed. Exiting.")
 		return
 	}
-	
+
 	for index, value := range *rounds {
 		logEntry := map[string]string{
 			"Round":                 fmt.Sprint(index + 1),
