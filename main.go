@@ -6,6 +6,7 @@ import (
 )
 
 var currentRound = 0
+var gameRounds = []interaction.RoundData{}
 
 func main() {
 	startGame()
@@ -67,4 +68,5 @@ func executeRound() string {
 
 func endGame(winner string) {
 	interaction.DeclareWinner(winner)
+	interaction.WriteLogFile(&gameRounds)
 }
