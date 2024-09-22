@@ -66,7 +66,7 @@ func WriteLogFile(rounds *[]RoundData) {
 	exPath = filepath.Dir(exPath)
 
 	file, err := os.Create(exPath + "/gamelog.txt")
-	//file, err := os.Create("gamelog.txt") // => go run .
+	// file, err := os.Create("gamelog.txt") // => go run .
 	if err != nil {
 		fmt.Println("Saving a log file failed. Exiting.")
 		return

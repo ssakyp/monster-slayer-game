@@ -57,6 +57,7 @@ func executeRound() string {
 	}
 
 	interaction.PrintRoundStatistics(&roundData)
+	gameRounds = append(gameRounds, roundData)
 
 	if playerHealth <= 0 {
 		return "Monster"
