@@ -13,8 +13,8 @@
 
 ## Output
 
-1) Choose Option like Heal or Damage monster. Damage and Heal amount is random.
-   We will get special weapon after 2 round
+1) Choose Option like Heal or Attack monster. Damage and Heal amount is random.
+   We will get special Attack after 2 round
 
 
 ![Alt text](docs/sc_1.png?raw=true "Game Started")
