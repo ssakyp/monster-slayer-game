@@ -1,4 +1,4 @@
-package acations
+package actions
 
 const PLAYER_HEALTH = 100
 const MONSTER_HEALTH = 100
